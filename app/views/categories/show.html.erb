@@ -4,8 +4,8 @@
 <table>
   <% @category.films.each do |film| %>
    <tr>
-      <td> <%= film.ratings.first.rating %></td>
-     <td><%= film.title %></td>
+      <td> <%= film.rating_average %></td>
+     <td><strong><%= film.title %></strong></td>
     </tr>
   <% end %>
 </table>
