@@ -1,6 +1,8 @@
 class FilmsController < ApplicationController
   def show
-    @category = Category.find(params[:id])
+    @film = Film.find(params[:id])
+    @rating = Rating.new
+    @ratings = Rating.all
   end
 
 end
