@@ -3,9 +3,10 @@ module UsersHelper
     number_of_comments = user.comments.count
 
     if number_of_comments >= 5
-      return user.trusted? = true
+      p "YES"
+      # return user.trusted_status = true
     else
-      user.trusted? = false
+      # user.trusted_status = false
     end
   end
 end
