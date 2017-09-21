@@ -1,6 +1,6 @@
 class RatingsController < ApplicationController
   def new
-    @rating = Rating.new
+    @new_rating = Rating.new
   end
 
   def create
@@ -10,7 +10,7 @@ class RatingsController < ApplicationController
       @new_rating.user = current_user
 
       if @new_rating.save
-        redirect_to film_path
+        redirect_to film_path(@film)
       else
         render '_new'
       end
@@ -19,7 +19,6 @@ class RatingsController < ApplicationController
 
 private
   def rating_params
-    p params
     params.require(:rating).permit(:rating)
   end
 end
