@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :films, only: [:show, :index ], shallow: true do
     resources :reviews, only: [:new, :index, :create]
+    resources :ratings, only: [:new, :create]
   end
 
   resources :reviews, only: [:new, :create], shallow: true do
