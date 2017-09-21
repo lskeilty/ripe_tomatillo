@@ -15,7 +15,7 @@
 <div id="hot-reviews">
   <p>Check out the most recent reviews for this category</p>
     <ul>
-      <% @category.film_reviews.each do |film_review| %>
+      <% @category.last_five_reviews.each do |film_review| %>
         <li><%= film_review.body %></li>
         <li><%= link_to film_review.film.title, film_path(film_review.film) %></li>
       <% end %>
