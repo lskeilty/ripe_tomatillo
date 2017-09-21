@@ -3,5 +3,10 @@
 <% @film.ratings.each do |rating| %>
   <%= rating.rating %>
 <% end %>
-
+<br>
+<p>Reviews</p>
+<% @film.reviews.each do |review| %>
+  <%= review.body %>
+<% end %>
 <%= render '/ratings/new' %>
+<%= render '/reviews/new' %>

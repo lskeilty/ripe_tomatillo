@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  include UsersHelper
+
   def new
     @review = Review.new
   end
@@ -6,19 +8,22 @@ class ReviewsController < ApplicationController
   def create
     if params[:film_id]
       @film = Film.find(params[:film_id])
-      @new_review = @film.review.new(review_params)
-      @new_review.trusted_user = current_user
+      @review = @film.reviews.new(review_params)
 
-      if @new_review.save
-        redirect_to film_path
+      if is_trusted?(current_user)
+        @review.trusted_user = current_user
+      end
+
+      if @review.save
+        redirect_to film_path(@film)
       else
-        render 'new'
+        render '_new'
       end
     end
   end
 
 private
   def review_params
-    params.require(:new_review).permit(:body)
+    params.require(:review).permit(:body)
   end
 end

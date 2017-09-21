@@ -3,4 +3,6 @@ class Review < ApplicationRecord
   belongs_to :film
   has_many :comments, as: :commentable
   has_many :ratings, as: :ratable
+
+  validates :body, presence: true
 end
