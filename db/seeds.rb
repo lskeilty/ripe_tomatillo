@@ -52,18 +52,30 @@ Film.create([{
 User.create([{
   email: "Roger@roger.com",
   password: "password",
-  trusted?: true
+  trusted_status: true
   }])
 
 User.create([{
   email: "Dillon@dillon.com",
   password: "password",
-  trusted?: false
+  trusted_status: false
   }])
 
 Review.create([{
   film_id: 1,
   body: "I loved this movie so much, it made me cry!",
+  trusted_user_id: 1
+  }])
+
+Review.create([{
+  film_id: 2,
+  body: "Lord of the rings suxxxx!",
+  trusted_user_id: 1
+  }])
+
+Review.create([{
+  film_id: 2,
+  body: "Actually, I changed my mind. LOTR is kind of cool!",
   trusted_user_id: 1
   }])
 
@@ -98,8 +110,3 @@ Rating.create([{
   user_id: 2,
   rating: 2
   }])
-
-
-
-
-
