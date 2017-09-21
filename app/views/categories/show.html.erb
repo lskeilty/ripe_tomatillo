@@ -1,2 +1,25 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1><%= @category.title %></h1>
+
+<h2>Movies</h2>
+<div id="film-data">
+  <table>
+    <% @category.films.each do |film| %>
+     <tr>
+        <td> <%= film.rating_average %></td>
+       <td><strong><%= link_to film.title, film_path(film) %></strong></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div id="hot-reviews">
+  <p>Check out the most recent reviews for this category</p>
+    <ul>
+      <% @category.last_five_reviews.each do |film_review| %>
+        <li><%= film_review.body %></li>
+        <li><%= link_to film_review.film.title, film_path(film_review.film) %></li>
+      <% end %>
+    </ul>
+</div>
+
+

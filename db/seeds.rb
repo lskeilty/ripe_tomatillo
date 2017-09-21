@@ -67,6 +67,18 @@ Review.create([{
   trusted_user_id: 1
   }])
 
+Review.create([{
+  film_id: 2,
+  body: "Lord of the rings suxxxx!",
+  trusted_user_id: 1
+  }])
+
+Review.create([{
+  film_id: 2,
+  body: "Actually, I changed my mind. LOTR is kind of cool!",
+  trusted_user_id: 1
+  }])
+
 #commenting on a film; non trusted user
 Comment.create([{
   commentable_id: 2,
