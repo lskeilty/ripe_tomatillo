@@ -52,13 +52,13 @@ Film.create([{
 User.create([{
   email: "Roger@roger.com",
   password: "password",
-  trusted?: true
+  trusted_status: true
   }])
 
 User.create([{
   email: "Dillon@dillon.com",
   password: "password",
-  trusted?: false
+  trusted_status: false
   }])
 
 Review.create([{
@@ -98,8 +98,3 @@ Rating.create([{
   user_id: 2,
   rating: 2
   }])
-
-
-
-
-
