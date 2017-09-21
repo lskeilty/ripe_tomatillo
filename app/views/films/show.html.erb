@@ -5,7 +5,7 @@
 <% end %>
 <br>
 <p>Reviews</p>
-<% @film.reviews.each do |review| %>
+<% @film.reviews.reverse.each do |review| %>
   <%= review.body %>
 <% end %>
 
