@@ -8,5 +8,11 @@
 <% @film.reviews.each do |review| %>
   <%= review.body %>
 <% end %>
-<%= render '/ratings/new' %>
-<%= render '/reviews/new' %>
+
+<p>Comments</p>
+<% @film.comments.each do |comment| %>
+  <%= comment.description %>
+<% end %>
+<p>Rating: <%= render '/ratings/new' %></p>
+<p>Review: <%= render '/reviews/new' %></p>
+<p>Comment: <%= render '/comments/new' %></p>

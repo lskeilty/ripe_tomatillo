@@ -5,6 +5,8 @@ class FilmsController < ApplicationController
     @ratings = Rating.all
     @reviews = Review.all
     @review = Review.new
+    @comments = Comment.all
+    @comment = Comment.new
   end
 
 end
