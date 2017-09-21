@@ -1,7 +1,7 @@
 class RatingsController < ApplicationController
-  def new
-    @new_rating = Rating.new
-  end
+  # def new
+  #   # @new_rating = Rating.new
+  # end
 
   def create
     if params[:film_id]
