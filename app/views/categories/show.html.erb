@@ -1,25 +1,29 @@
-<h1><%= @category.title %></h1>
-
-<h2>Movies</h2>
-<div id="film-data">
-  <table>
-    <% @category.films.each do |film| %>
-     <tr>
-        <td> <%= film.rating_average %></td>
-       <td><strong><%= link_to film.title, film_path(film) %></strong></td>
-      </tr>
-    <% end %>
-  </table>
+<div id="category-movies">
+  <h1><%= @category.title %> Movies </h1>
+  <section id="movies-show-page">
 </div>
-
-<div id="hot-reviews">
-  <p>Check out the most recent reviews for this category</p>
-    <ul>
-      <% @category.last_five_reviews.each do |film_review| %>
-        <li><%= film_review.body %></li>
-        <li><%= link_to film_review.film.title, film_path(film_review.film) %></li>
+  <div id="film-data">
+    <table>
+      <% @category.films.each do |film| %>
+       <tr>
+          <td id="column-rating"> <%= film.rating_average %></td>
+          <td id="column-movie"><strong><%= link_to film.title, film_path(film) %></strong></td>
+        </tr>
       <% end %>
-    </ul>
-</div>
+    </table>
+  </div>
 
+  <div id="hot-reviews">
+    <img id="fire" src="/assets/Fire_Emoji_large.png" width=90px height=90px alt="fire-emoji">
+    <p id="hot-right-now">HOT RIGHT NOW</p>
+      <ul id="hot-stuff">
+        <% @category.last_five_reviews.each do |film_review| %>
+          <li id="hot-film-body">"<%= film_review.body %>"</li>
+          <li id="hot-film-title"><%= link_to film_review.film.title, film_path(film_review.film) %> <%= film_review.created_at.to_date %></li>
+
+          <br>
+        <% end %>
+      </ul>
+  </div>
+</section>
 

@@ -1,2 +1,33 @@
-<h1>Films#show</h1>
-<p>Find me in app/views/films/show.html.erb</p>
+<h1><%= @film.title %></h1>
+
+
+<br>
+<p>Reviews</p>
+<% @film.reviews.reverse.each do |review| %>
+  <p>Review Average Rating: <%= review.review_average %></p>
+  <%= review.body %>
+  <ul>
+  <% review.comments.reverse.each do |comment| %>
+    <li><%= comment.description %></li>
+  <% end %>
+  </ul>
+  <p>Rating: <%= render '/ratings/review', review: review %></p>
+  <p>Comment: <%= render '/comments/review', review: review %></p>
+<% end %>
+
+<p>Films</p>
+<p>Film Average Rating: <%= @film.rating_average %></p>
+<p><%= @film.film_description %></p>
+<ul>
+<% @film.comments.reverse.each do |comment| %>
+  <li><%= comment.description %></li>
+<% end %>
+</ul>
+
+<% if current_user %>
+  <p>Rating: <%= render '/ratings/new' %></p>
+  <p>Comment: <%= render '/comments/new' %></p><br>
+    <% if is_trusted?(current_user) %>
+      <p>Review: <%= render '/reviews/new' %></p>
+    <% end %>
+<% end %>

@@ -1,9 +1,15 @@
-<h1>Welcome to Ripe Tomatillos!</h1>
+<section class="marquee">
+  <div id="section-container">
+    <h1 id="welcome-header">Welcome to Ripe Tomatillos!</h1>
+  </div>
+</section>
 
-<h2>Categories:</h2>
-  <ul>
+<div id="categories">
+  <h2 id="categories-header">Categories:</h2>
+  <ul id="categories-list">
     <% @categories.each do |category| %>
-    <li><%= link_to category.title, category_path(category) %></li>
+      <li><%= link_to category.title, category_path(category) %></li>
     <% end %>
   </ul>
+</div>
 
