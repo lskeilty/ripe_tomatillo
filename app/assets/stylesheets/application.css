@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: Didot;
+}
+.navbar-text {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #9ACD32 ;
+}
+
+.navbar-text li {
+    float: left;
+}
+
+.navbar-text li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar-text li a:hover {
+    background-color: #367c17;
+}
+
+#login-page {
+
+  background-color: #e3ffd6;
+  border-color: #367c17;
+  border-radius: 25px;
+  width: 25%;
+  border-style: solid;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#signup-page {
+  background-color: #e3ffd6;
+  border-color: #367c17;
+  border-radius: 25px;
+  width: 25%;
+  border-style: solid;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
