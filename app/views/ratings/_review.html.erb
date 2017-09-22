@@ -1,4 +1,4 @@
-<%= form_for [@film, @new_rating] do |f| %>
+<%= form_for [review, review.ratings.new] do |f| %>
   <% if @new_rating.errors.any? %>
     <div id = "errors">
      <h2> <%= pluralize(@new_rating.errors.count, "error") %> prevented this ratings from saving </h2>

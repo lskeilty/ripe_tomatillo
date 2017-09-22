@@ -52,7 +52,7 @@ Film.create([{
 User.create([{
   email: "Roger@roger.com",
   password: "password",
-  trusted_status: true
+  trusted_status: false
   }])
 
 User.create([{

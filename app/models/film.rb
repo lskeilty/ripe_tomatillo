@@ -8,7 +8,7 @@ class Film < ApplicationRecord
     if self.ratings.any?
       sum =  0
       self.ratings.each do |rating|
-        sum += rating.rating
+        sum += rating.rating.to_i
       end
       return (sum.to_f / self.ratings.count).round(2)
     else
