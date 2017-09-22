@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
       if @comment.save
         redirect_to film_path(@review.film.id)
       else
-        render '_new'
+        render '_error'
       end
     end
   end

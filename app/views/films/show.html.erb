@@ -1,29 +1,18 @@
 <h1><%= @film.title %></h1>
 
-
-<br>
-<p>Reviews</p>
-<% @film.reviews.reverse.each do |review| %>
-  <p>Review Average Rating: <%= review.review_average %></p>
-  <%= review.body %>
-  <ul>
-  <% review.comments.reverse.each do |comment| %>
-    <li><%= comment.description %></li>
-  <% end %>
-  </ul>
-  <p>Rating: <%= render '/ratings/review', review: review %></p>
-  <p>Comment: <%= render '/comments/review', review: review %></p>
-<% end %>
-
-<p>Films</p>
+<div id="film-comments">
+<h2 id="film-details">Film details</h2>
+<div id="about-the-film">
 <p>Film Average Rating: <%= @film.rating_average %></p>
-<p><%= @film.film_description %></p>
+<p><strong>Film description:</strong> <%= @film.film_description %></p>
+</div>
+<p>Comments:</p>
 <ul>
 <% @film.comments.reverse.each do |comment| %>
   <li><%= comment.description %></li>
 <% end %>
 </ul>
-
+<br>
 <% if current_user %>
   <p>Rating: <%= render '/ratings/new' %></p>
   <p>Comment: <%= render '/comments/new' %></p><br>
@@ -31,3 +20,30 @@
       <p>Review: <%= render '/reviews/new' %></p>
     <% end %>
 <% end %>
+</div>
+<div id="reviews-section">
+<h2>Reviews for <%=@film.title%></h2>
+<% @film.reviews.reverse.each do |review| %>
+  <div id="one-review">
+  <p>Review Average Rating: <%= review.review_average %></p>
+  <div id=actual-review>
+    <strong><%= review.body %></strong>
+  </div>
+  <ul id="review-list">
+  <% review.comments.reverse.each do |comment| %>
+    <li><%= comment.description %></li>
+    <br>
+  <% end %>
+  </ul>
+  <% if current_user %>
+  <p>Rating: <%= render '/ratings/review', review: review %></p>
+  <p>Comment: <%= render '/comments/review', review: review %></p>
+<br>
+  <% end %>
+  </div>
+<% end %>
+</div>
+<br>
+<br>
+
+

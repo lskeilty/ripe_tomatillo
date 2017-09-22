@@ -22,7 +22,7 @@ class RatingsController < ApplicationController
       if @new_rating.save
         redirect_to film_path(@review.film.id)
       else
-        render '_new'
+        render '_error'
       end
     end
   end
