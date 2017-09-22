@@ -29,7 +29,64 @@
   font-size: 25px;
 }
 
-#categories-header {
 
+#film-data {
+  padding: 20px;
 }
 
+#column-rating {
+  padding: 15px;
+  width: 70px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#column-movie {
+  padding: 15px;
+  width: 4cd 00px;
+  font-size: 30px
+}
+#hot-reviews {
+  border: 2px solid red;
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 30%;
+}
+
+#fire {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+#hot-stuff {
+  list-style-type: none;
+}
+
+#hot-film-body {
+  font-size: 20px;
+}
+
+#hot-film-title {
+  padding-left: 35px;
+  color: #A9A9A9;
+}
+
+#hot-right-now {
+  text-align: center;
+  color: red;
+}
+
+#film-data {
+  float: left;
+}
+
+#category-movies {
+  font-size: 26px;
+}
