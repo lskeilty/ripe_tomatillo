@@ -6,6 +6,7 @@ class FilmsController < ApplicationController
     @reviews = Review.all
     @review = Review.new
     @comments = Comment.all
+    #@the_review = Review.find(params[:])
     @comment = Comment.new
   end
 
