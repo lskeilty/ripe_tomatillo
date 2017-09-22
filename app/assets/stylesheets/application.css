@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+body {
+  font-family: Didot;
+}
 .navbar-text {
     list-style-type: none;
     margin: 0;
