@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
       if @comment.save
         redirect_to film_path(@review.film.id)
       else
-        render '_error'
+        redirect_back(fallback_location: root_path)
       end
     end
   end

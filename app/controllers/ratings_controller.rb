@@ -1,7 +1,4 @@
 class RatingsController < ApplicationController
-  # def new
-  #   # @new_rating = Rating.new
-  # end
 
   def create
     if params.has_key?(:film_id)
@@ -22,7 +19,8 @@ class RatingsController < ApplicationController
       if @new_rating.save
         redirect_to film_path(@review.film.id)
       else
-        render '_error'
+        #render '_new'
+        redirect_back(fallback_location: root_path)
       end
     end
   end
