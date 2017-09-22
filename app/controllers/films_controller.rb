@@ -3,11 +3,11 @@ class FilmsController < ApplicationController
     @film = Film.find(params[:id])
     @new_rating = Rating.new
     @ratings = Rating.all
-    @reviews = Review.all
     @review = Review.new
+    @reviews = Review.all
+    @comment = Comment.new
     @comments = Comment.all
     #@the_review = Review.find(params[:])
-    @comment = Comment.new
   end
 
 end
