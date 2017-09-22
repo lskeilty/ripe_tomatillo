@@ -38,3 +38,24 @@
 .navbar-text li a:hover {
     background-color: #367c17;
 }
+
+#login-page {
+
+  background-color: #e3ffd6;
+  border-color: #367c17;
+  border-radius: 25px;
+  width: 25%;
+  border-style: solid;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#signup-page {
+  background-color: #e3ffd6;
+  border-color: #367c17;
+  border-radius: 25px;
+  width: 25%;
+  border-style: solid;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
