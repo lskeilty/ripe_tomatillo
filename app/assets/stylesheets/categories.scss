@@ -1,3 +1,35 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.marquee {
+  background-image: url(/assets/movie_theater.png);
+  width: 1250px;
+  height: 450px;
+}
+
+#welcome-header {
+  padding-top: 105px;
+  text-align: center;
+  color: #9ACD32;
+  font-size: 60px;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#categories {
+  padding-left: 50px;
+  font-size: 25px;
+}
+
+#categories-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 15;
+  font-size: 25px;
+}
+
+#categories-header {
+
+}
+
