@@ -1,3 +1,38 @@
 // Place all the styles related to the films controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#reviews-section {
+  border: solid black 2px;
+  padding: 25px;
+}
+
+#review-list {
+  list-style-type: none;
+}
+
+#one-review {
+  border: solid black 0.5px;
+}
+
+#actual-review {
+  background-color: #F0E68C;
+  padding: 20px;
+  font-size: 18px;
+}
+
+#film-comments {
+  border: solid black 2px;
+  padding: 25px;
+}
+
+#film-details {
+  background-color: #DCDCDC;
+  padding: 10px;
+}
+
+#about-the-film {
+  background-color: #F0E68C;
+  padding: 10px;
+  font-size: 18px;
+}

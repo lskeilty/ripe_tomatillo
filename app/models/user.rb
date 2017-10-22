@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :ratings
   has_many :comments
   has_many :reviews, foreign_key: "trusted_user_id"
+  validates :email, presence: true, uniqueness: true
 
 end

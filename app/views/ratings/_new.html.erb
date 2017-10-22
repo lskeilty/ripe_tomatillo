@@ -1,0 +1,19 @@
+<%= form_for [@film, @new_rating] do |f| %>
+  <% if @new_rating.errors.any? %>
+    <div id = "errors">
+     <h2> <%= pluralize(@new_rating.errors.count, "error") %> prevented this ratings from saving </h2>
+     <ul>
+      <% @new_rating.errors.full_messages.each do |msg| %>
+      <li> <%= msg %></li>
+      <% end %>
+    </ul>
+    </div>
+  <% end %>
+  <p>
+   <%= f.label :rating %>
+   <%= f.select :rating, options_for_select(["1","2","3","4","5"]) %>
+  </p>
+  <p>
+    <%= submit_tag("Submit Rating") %>
+  </p>
+<% end %>
